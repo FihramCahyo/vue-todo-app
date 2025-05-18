@@ -47,10 +47,7 @@ export const useAuthStore = defineStore('auth', {
           return false;
         }
       } catch (error: any) {
-        this.error = error.response?.data?.message || 'Login failed';
-        toast(this.error, {
-          type: 'error',
-        });
+        this.error = error.response?.data?.message || 'Username atau password salah';
         return false;
       } finally {
         this.loading = false;
