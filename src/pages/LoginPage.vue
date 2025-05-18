@@ -2,7 +2,7 @@
   <section class="bg-gray-50 dark:bg-gray-900">
     <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0 min-h-screen">
       <div class="flex items-center text-4xl font-semibold text-gray-900 dark:text-white">
-        <img class="w-30 h-30 mr-3" src="/public/images/logo.png" alt="logo">
+        <img class="w-30 h-30 mr-3" src="/images/logo.png" alt="logo">
         Todo App
       </div>
       <div
@@ -45,6 +45,7 @@ import { reactive } from 'vue';
 import { useRouter } from 'vue-router';
 import { useAuthStore } from '../stores/auth';
 import * as yup from 'yup';
+import logo from '../public/images/logo.png';
 
 const router = useRouter();
 const authStore = useAuthStore();
