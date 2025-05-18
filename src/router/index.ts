@@ -33,7 +33,7 @@ const router = createRouter({
   routes,
 });
 
-// Navigation guard
+// Navigation guard untuk mengontrol akses ke halaman berdasarkan status autentikasi.
 router.beforeEach((to, from, next) => {
   const authStore = useAuthStore();
   const requiresAuth = to.meta.requiresAuth;
