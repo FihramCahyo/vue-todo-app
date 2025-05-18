@@ -1,8 +1,8 @@
 import LoginPage from '@/pages/LoginPage.vue';
+import NotFoundPage from '@/pages/NotFoundPage.vue';
 import TodosPage from '@/pages/TodosPage.vue';
 import { useAuthStore } from '@/stores/auth';
-import AboutView from '@/views/AboutView.vue';
-import { createRouter, createWebHistory, type RouteRecord, type RouteRecordRaw } from 'vue-router'
+import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
 
 const routes: RouteRecordRaw[] = [
   {
@@ -21,17 +21,11 @@ const routes: RouteRecordRaw[] = [
     component: TodosPage,
     meta: { requiresAuth: true },
   },
-  // {
-  //   path: '/:pathMatch(.*)*',
-  //   name: 'NotFound',
-  //   component: NotFoundPage,
-  // },
-  // {
-  //   path: '/about',
-  //   name: 'About',
-  //   component: AboutView,
-  //   meta: { requiresAuth: false },
-  // }
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'NotFound',
+    component: NotFoundPage,
+  },
 ];
 
 const router = createRouter({

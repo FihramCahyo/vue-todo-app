@@ -6,7 +6,7 @@
         id="title"
         v-model="form.title"
         type="text"
-        class="input w-full mt-1"
+        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
         :class="{ 'border-red-500': errors.title }"
         placeholder="Enter todo title"
       />
@@ -18,7 +18,7 @@
       <textarea
         id="description"
         v-model="form.description"
-        class="input w-full mt-1"
+        class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white"
         :class="{ 'border-red-500': errors.description }"
         rows="3"
         placeholder="Enter todo description"
@@ -27,10 +27,10 @@
     </div>
 
     <div class="flex justify-end space-x-3">
-      <button type="button" @click="$emit('cancel')" class="btn btn-secondary">
+      <button type="button" @click="$emit('cancel')" class="px-4 py-2 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600">
         Cancel
       </button>
-      <button type="submit" class="btn btn-primary" :disabled="isSubmitting">
+      <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500" :disabled="isSubmitting">
         {{ isEditing ? 'Update' : 'Create' }}
       </button>
     </div>

@@ -35,16 +35,14 @@ export const useAuthStore = defineStore('auth', {
           localStorage.setItem('token', response.token);
           localStorage.setItem('user', JSON.stringify(user));
 
-          toast('Login successful', {
+          toast('Login Berhasil', {
             type: 'success',
-            autoClose: 3000,
           });
           return true;
         } else {
           this.error = response.message || 'Login failed';
           toast(this.error, {
             type: 'error',
-            autoClose: 3000,
           });
           return false;
         }
@@ -52,7 +50,6 @@ export const useAuthStore = defineStore('auth', {
         this.error = error.response?.data?.message || 'Login failed';
         toast(this.error, {
           type: 'error',
-          autoClose: 3000,
         });
         return false;
       } finally {
@@ -63,10 +60,6 @@ export const useAuthStore = defineStore('auth', {
     logout() {
       logoutService();
       this.user = null;
-      toast('Logged out successfully', {
-        type: 'info',
-        autoClose: 3000,
-      });
     },
 
     initAuth() {
