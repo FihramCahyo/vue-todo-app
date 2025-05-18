@@ -151,5 +151,3 @@ Beberapa ide untuk pengembangan lebih lanjut:
 ## Lisensi
 
 [MIT](LICENSE)
-
-        Too many current requests. Your queue position is 1. Please wait for a while or switch to other models for a smoother experience.
